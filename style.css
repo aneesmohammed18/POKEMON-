@@ -1,0 +1,240 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: #07090c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.inputcont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20vh;
+    width: 50%;
+    margin: 20px;
+}
+
+.inputcont input {
+    height: 40px;
+    width: 500px;
+    margin: 20px 20px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+}
+
+.inputcont input:focus {
+    box-shadow: 3px 3px 40px 8px #0ff;
+    border: none;
+}
+
+.inputcont button {
+    width: 200px;
+    border-radius: 30px;
+    height: 40px;
+}
+
+.inputcont button:hover {
+    background-color: rgb(236, 38, 71);
+    color: white;
+}
+
+.poke {
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    width: 90%;
+}
+
+.pokemondetails {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    width: 50%;
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.pokemonimg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    width: 50%
+}
+
+.pokemonimg img {
+    height: 350px;
+    width: 350px;
+    -webkit-filter: drop-shadow(0px 0px 15px rgba(255, 215, 0, 0.7));
+    filter: drop-shadow(0px 0px 15px rgba(255, 215, 0, 0.7));
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.stars {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #fff;
+    box-shadow: 50px 100px #fff, 75px 300px #fff, 200px 150px #fff,
+        300px 400px #fff, 500px 350px #fff, 600px 700px #fff,
+        700px 100px #fff, 900px 600px #fff, 1000px 250px #fff,
+        1200px 450px #fff, 1300px 100px #fff, 1400px 800px #fff,
+        1500px 500px #fff, 1600px 700px #fff, 1700px 200px #fff,
+        1800px 600px #fff, 1900px 300px #fff, 2000px 700px #fff,
+        50px 500px #fff, 300px 900px #fff, 400px 1200px #fff,
+        900px 1000px #fff, 800px 1500px #fff, 1500px 1800px #fff,
+        1700px 1400px #fff, 1400px 1900px #fff, 1600px 1700px #fff,
+        2000px 800px #fff, 3000px 100px #fff, 3100px 300px #fff;
+    animation: twinkle .1s infinite;
+    pointer-events: none;
+}
+
+#creds {
+    position: absolute;
+    bottom: 10px;
+    color: yellow;
+}
+
+/* //responsive// */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .inputcont input {
+        width: 150%;
+    }
+
+    .poke #name {
+        text-align: center;
+    }
+
+    .poke {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .poke #name {
+        font-size: 2rem;
+    }
+
+    .poke img {
+        margin-top: 40px;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+
+    .poke #name {
+        text-align: center;
+    }
+
+    .poke {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pokemonimg img {
+        height: 300px;
+        width: 300px;
+    }
+
+    .poke img {
+        margin-top: 40px;
+    }
+
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+
+    .poke #name {
+        text-align: center;
+    }
+
+    .poke {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pokemonimg img {
+        height: 350px;
+        width: 350px;
+    }
+
+    .poke img {
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .poke #name {
+        text-align: center;
+    }
+
+    .poke {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pokemonimg img {
+        height: 350px;
+        width: 350px;
+    }
+
+    .poke img {
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+
+    .poke #name {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .pokemonimg img {
+        height: 400px;
+        width: 400px;
+        margin-top: 40px;
+    }
+}
